@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/item_action_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Товары недели"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="14dp"
+            android:background="#F7DE5B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/item_action_picture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_action_title"
+            />
+
+        <RatingBar
+            android:id="@+id/item_action_rating"
+            style="?attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:theme="@style/RatingBar"
+            app:layout_constraintEnd_toEndOf="@+id/item_action_picture"
+            app:layout_constraintStart_toStartOf="@+id/item_action_picture"
+            app:layout_constraintTop_toBottomOf="@+id/item_action_picture"
+            />
+
+        <TextView
+            android:id="@+id/item_action_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Дата"
+            android:textColor="#FF4A00"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_action_picture"
+            app:layout_constraintTop_toBottomOf="@+id/item_action_title"
+            />
+
+        <TextView
+            android:id="@+id/item_action_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Грунт для аквариума Dennerle Crystal Quartz Gravel светло-коричневый 1 – 2 мм 5 кг (1 шт)"
+            android:textColor="#333333"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_action_picture"
+            app:layout_constraintTop_toBottomOf="@+id/item_action_date"
+            />
+
+        <TextView
+            android:id="@+id/item_action_old_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="1950 ₽"
+            android:textColor="#4F4F4F"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/item_action_name"
+            app:layout_constraintTop_toBottomOf="@+id/item_action_name"
+            />
+
+        <TextView
+            android:id="@+id/item_action_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1890 ₽"
+            android:textColor="#FF4A00"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/item_action_old_price"
+            app:layout_constraintTop_toBottomOf="@+id/item_action_old_price"
+            />
+
+        <Button
+            android:id="@+id/item_action_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/first_button_background"
+            android:text="Купить"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/item_action_price"
+            app:layout_constraintStart_toEndOf="@+id/item_action_price"
+            app:layout_constraintTop_toTopOf="@+id/item_action_price"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

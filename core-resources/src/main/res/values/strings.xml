@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="slide_location_title">Куда будем доставлять?</string>
+    <string name="slide_location_body">Включите определение  геопозиции, чтобы мы могли быстро доставить вам товар.</string>
+    <string name="slide_sale_title">Цены в нашем магазине вас приятно удивят!</string>
+    <string name="slide_sale_body">Мы работаем напрямую с производителями, и это позволяет нам избежать лишних наценок на товары.</string>
+    <string name="slide_notification_title">Будьте в курсе</string>
+    <string name="slide_notification_body">Мы будем сообщать Вам о состоянии ваших текущих заказов, а так же специальных предложений!</string>
+    <string name="slide_delivery_title">Доставим Ваш заказ без задержек!</string>
+    <string name="slide_delivery_body">У нашего магазина есть собственный склад, поэтому Ваш заказ будет доставлен вовремя и без задержек.</string>
+    <string name="slide_discounts_title">Постоянные скидки!</string>
+    <string name="slide_discounts_body">Подпишитесь на рассылку MAGIZOO.RU — и покупать в нашем магазине станет еще выгоднее и интереснее.</string>
+    <string name="slide_action_next">Далее</string>
+    <string name="slide_action_grant_permission">Разрешить</string>
+    <string name="slide_action_begin">Начать</string>
+
+</resources>

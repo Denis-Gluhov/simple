@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_graph_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="ru.magizoo.feature_splash.presentation.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_inputPhoneFragment"
+            app:destination="@id/inputPhoneFragment"
+            app:popUpTo="@id/app_graph_navigation"/>
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/app_graph_navigation"/>
+        <action
+            android:id="@+id/action_splashFragment_to_tourFragment"
+            app:destination="@id/tourFragment"
+            app:popUpTo="@id/app_graph_navigation"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/inputPhoneFragment"
+        android:name="ru.magizoo.feature_registration.input_phone.InputPhoneFragment"
+        android:label="InputPhoneFragment"
+        tools:layout="@layout/fragment_input_phone">
+        <action
+            android:id="@+id/action_inputPhoneFragment_to_privacyPolicyFragment"
+            app:destination="@id/privacyPolicyFragment" />
+        <action
+            android:id="@+id/action_inputPhoneFragment_to_confirmPhoneFragment"
+            app:destination="@id/confirmPhoneFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/confirmPhoneFragment"
+        android:name="ru.magizoo.feature_registration.confirm_phone.ConfirmPhoneFragment"
+        android:label="ConfirmPhoneFragment"
+        tools:layout="@layout/fragment_confirm_phone">
+        <action
+            android:id="@+id/action_confirmPhoneFragment_to_inputUserFragment"
+            app:destination="@id/inputUserFragment"
+            app:popUpTo="@id/app_graph_navigation"/>
+        <argument
+            android:name="phone"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="ru.magizoo.feature_policy.presentation.PolicyFragment"
+        android:label="PrivacyPolicyFragment"
+        tools:layout="@layout/fragment_policy"/>
+
+    <fragment
+        android:id="@+id/inputUserFragment"
+        android:name="ru.magizoo.feature_registration.input_user.InputUserFragment"
+        android:label="InputUserFragment"
+        tools:layout="@layout/fragment_input_user">
+        <action
+            android:id="@+id/action_inputNameFragment_to_inputLocationFragment"
+            app:destination="@id/inputLocationFragment"
+            app:popUpTo="@id/app_graph_navigation"/>
+        <action
+            android:id="@+id/action_inputNameFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/app_graph_navigation"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/inputLocationFragment"
+        android:name="ru.magizoo.feature_registration.input_location.InputLocationFragment"
+        android:label="InputLocationFragment"
+        tools:layout="@layout/fragment_input_location">
+        <action
+            android:id="@+id/action_inputCityFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/app_graph_navigation"/>
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_homeFragment"
+        app:destination="@id/homeFragment"
+        app:popUpTo="@id/app_graph_navigation"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ru.magizoo.feature_home.presentation.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home"/>
+
+    <action
+        android:id="@+id/action_global_catalogFragment"
+        app:destination="@id/catalogFragment"
+        app:popUpTo="@id/app_graph_navigation"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/catalogFragment"
+        android:name="ru.magizoo.feature_catalog.presentation.CatalogFragment"
+        android:label="CatalogFragment"
+        tools:layout="@layout/fragment_catalog"/>
+
+    <action
+        android:id="@+id/action_global_basketFragment"
+        app:destination="@id/basketFragment"
+        app:popUpTo="@id/app_graph_navigation"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/basketFragment"
+        android:name="ru.magizoo.feature_basket.presentation.BasketFragment"
+        android:label="BasketFragment"
+        tools:layout="@layout/fragment_basket"/>
+
+    <action
+        android:id="@+id/action_global_profileFragment"
+        app:destination="@id/profileFragment"
+        app:popUpTo="@id/app_graph_navigation"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="ru.magizoo.feature_profile.presentation.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+
+    <fragment
+        android:id="@+id/tourFragment"
+        android:name="ru.magizoo.feature_tour.presentation.tour.TourFragment"
+        android:label="TourFragment"
+        tools:layout="@layout/fragment_tour">
+        <action
+            android:id="@+id/action_tutorialFragment_to_sliderFragment"
+            app:destination="@id/sliderFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sliderFragment"
+        android:name="ru.magizoo.feature_tour.presentation.slider.SliderFragment"
+        android:label="SliderFragment"
+        tools:layout="@layout/fragment_slider">
+        <action
+            android:id="@+id/action_sliderTutorialFragment_to_inputPhoneFragment"
+            app:destination="@id/inputPhoneFragment"
+            app:popUpTo="@id/app_graph_navigation"/>
+    </fragment>
+
+</navigation>

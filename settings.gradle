@@ -1,0 +1,13 @@
+include ':feature-profile'
+include ':feature-basket'
+include ':feature-catalog'
+include ':feature-home'
+include ':feature-registration'
+include ':feature-policy'
+include ':core-network'
+include ':feature-splash'
+include ':core'
+include ':core-resources'
+include ':feature-tour'
+include ':app'
+rootProject.name = "magizoo"
